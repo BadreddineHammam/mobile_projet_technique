@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <div class="flex flex-col items-center justify-center h-screen bg-gray-100 ">
+        <div class="border border-black">
+            <form method="POST" id="form_1" class="grid grid-cols-2 ">
+                <label class="p-2 m-auto">Name</label>
+                <input type="text" class="p-2 m-2 " id="name">
+                <label class="p-2 m-2 m-auto">Categorie</label>
+                <input type="text" id="categorie" class="p-2 m-2 ">
+                <button class="border border-gray-600 rounded-lg m-2">
+                    ADD
+                </button>
+            </form>
+        </div>
+    <div>
+        <table class=" bg-blue-100 mt-6">
+            <thead>
+                <tr>
+                    <th class="border border-black px-9 py-3">the id</th>
+                    <th class="border border-black px-9 py-3">the name</th>
+                    <th class="border border-black px-9 py-3">the categorie</th>
+                </tr>
+            </thead>
+            <thead id="resulte_120">
+
+            </thead>
+        </table>
+    </div>
+ </div>
+</body>
+</html>

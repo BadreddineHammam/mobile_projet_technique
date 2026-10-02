@@ -8,7 +8,7 @@ let category_1 = document.getElementById("category");
 function show_all()
 {
     fetch('backend/api.php')
-    .then(response => response.json() )
+    .then(response => response.json() ) 
     .then(data_1 => {
         let container = document.getElementById("result_final");
         container.innerHTML = '' ;
