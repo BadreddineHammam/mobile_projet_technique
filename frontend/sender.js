@@ -1,16 +1,12 @@
 let id_category_1 = document.getElementById("id_category");
 let form_category_1 = document.getElementById("form_category");
-let name_1 = document.getElementById("name");
-let category_1 = document.getElementById("category");
-
-
 
 function show_all()
 {
-    fetch('backend/api.php')
+   let container = document.getElementById("result_final");
+    fetch('../backend/api.php')
     .then(response => response.json() ) 
     .then(data_1 => {
-        let container = document.getElementById("result_final");
         container.innerHTML = '' ;
         data_1.data.forEach( element => {
            let container_mini = document.createElement("tr");
@@ -33,13 +29,17 @@ function show_all()
 form_category_1.addEventListener('submit' , (e) => {
 
  e.preventDefault();
+
+ let name_1 = document.getElementById("name").value;
+ let category_1 = document.getElementById("category").value;
+
  let Data_11 = 
  {
-    name: name_1.value ,
-    category : category_1.value
+    name: name_1 ,
+    category : category_1
  };
 
- fetch('backend/api.php' , 
+ fetch('../backend/api.php' , 
  {
     method : 'POST' ,
     headers : {'Content-Type': 'application/json'},
@@ -57,4 +57,4 @@ form_category_1.addEventListener('submit' , (e) => {
            console.log("error dyalna " , error) ;
         });
 });
-document.addEventListener('DOMContentLoaded' ,show_all );
+document.addEventListener('DOMContentLoaded' ,show_all);

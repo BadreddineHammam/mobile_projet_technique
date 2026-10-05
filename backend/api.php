@@ -5,10 +5,6 @@ $file_name = __DIR__ . '/data.json' ;
 $all_data = file_exists($file_name) ? json_decode(file_get_contents($file_name),true) : [] ;
 $receive_data = json_decode(file_get_contents('php://input'),true);
 
-
-
-
-
 if ($_SERVER['REQUEST_METHOD'] === 'GET') 
 {
 
@@ -16,8 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET')
         'success' => true,
         'data' => $all_data
     ]);
-
-
 } 
 else if($_SERVER['REQUEST_METHOD'] === 'POST' )
 {
